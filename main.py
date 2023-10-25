@@ -9,7 +9,7 @@ class ADSO_Dashboard:
 
         # Set the dark theme
         self.bg_color = "#2E2E2E"
-        self.fg_color = "#FFFFFF"
+        self.fg_color = "#141414"  # Bright green for better contrast
         self.root.configure(bg=self.bg_color)
 
         self.create_buttons()
@@ -19,10 +19,12 @@ class ADSO_Dashboard:
             'bg': self.bg_color,
             'fg': self.fg_color,
             'activebackground': '#3E3E3E',
-            'activeforeground': '#FFFFFF',
+            'activeforeground': '#00AA00',  # Slightly darker green when active
             'borderwidth': 0,
             'relief': 'flat',
-            'highlightbackground': self.bg_color
+            'highlightbackground': self.bg_color,
+            'padx': 15,  # Padding on the x axis
+            'pady': 10   # Padding on the y axis
         }
 
         # Button to run app.py
@@ -61,3 +63,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ADSO_Dashboard(root)
     root.mainloop()
+
